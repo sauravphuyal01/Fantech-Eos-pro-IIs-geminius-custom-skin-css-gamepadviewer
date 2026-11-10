@@ -38,7 +38,7 @@ The skin maps directly over the standard GamepadViewer Xbox One template (.contr
 Base Dimensions:
 - Canvas: 582px x 460px
 - Scale Factor: scale(1.30434) translate(-50%, -50%)
-- Stylesheet URL: https://raw.githubusercontent.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/refs/heads/main/Fantech-Geminius.css
+- Stylesheet URL: https://cdn.jsdelivr.net/gh/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer@832fa0a09551f4946c27950c3fb1a316a553b133/Fantech-Geminius.css
 
 Element Mapping:
 - Body Shell: .controller.custom (582px x 460px base container)
