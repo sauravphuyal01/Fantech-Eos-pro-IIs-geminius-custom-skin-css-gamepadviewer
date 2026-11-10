@@ -1,0 +1,414 @@
+/*BEGIN Fantech EOS PRO II s Controller Styling*/
+
+/* Main */
+.controller.custom {
+  position: absolute;
+  background-image: url("https://i.imgur.com/x5LZfxE.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 582px;
+  height: 460px;
+  transform: scale(1.30434) translate(-50%, -50%);
+}
+
+.controller.custom:not(.disconnected) {
+  background-image: url("https://i.imgur.com/x5LZfxE.png");
+}
+
+.custom.disconnected {
+  background-image: url("https://i.imgur.com/gEwd12d.png");
+}
+
+.custom.disconnected div {
+  display: none;
+}
+
+/* Shifts - UPDATED BUMPERS ONLY */
+.custom .bumpers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.custom .bumper {
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.05s ease, top 0.05s ease;
+}
+
+/* Left Bumper (LB) */
+.custom .bumper.left {
+  top: 6px;
+  left: 77px;
+  transform: rotate(-5deg);
+  background-image: url("https://i.imgur.com/Jo1kgak.png");
+  filter: brightness(0.92) contrast(1.1);
+}
+
+.custom .bumper.left.pressed {
+  top: 2px;
+  left: 62px;
+  transform: rotate(-3.5deg);
+  background-image: url("https://i.imgur.com/FiFZsyL.png");
+  filter: grayscale(100%) brightness(1) contrast(1.2) !important;
+  clip-path: inset(0 0 10% 0); /* Cuts off the bottom edge from bleeding into the shell */
+}
+
+/* Right Bumper (RB) */
+.custom .bumper.right {
+  top: 5px;
+  left: -77px;
+  transform: rotateY(180deg) rotate(-5deg);
+  background-image: url("https://i.imgur.com/Jo1kgak.png");
+  filter: brightness(0.92) contrast(1.1);
+}
+
+.custom .bumper.right.pressed {
+  top: 2px;
+  left: -62px;
+  transform: rotateY(180deg) rotate(-3.5deg);
+  background-image: url("https://i.imgur.com/FiFZsyL.png");
+  filter: grayscale(100%) brightness(1) contrast(1.2) !important;
+  clip-path: inset(0 0 10% 0); /* Cuts off the bottom edge from bleeding into the shell */
+}
+/* Custom Triggers - Clean Solid Matte Gunmetal with High-Visibility Labels */
+.custom .triggers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.custom .trigger-button {
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: filter 0.05s ease, transform 0.05s ease;
+}
+
+/* Left Trigger (LT) - Resting */
+.custom .trigger-button.left {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 582 460' width='582px' height='460px' style='shape-rendering:geometricPrecision; fill-rule:evenodd; clip-rule:evenodd'%3E%3Cdefs%3E%3Cstyle%3E.body%7Bfill:%2325272a; stroke:%233d4147; stroke-width:1.5px;%7D.lbl%7Bfill:%23e2e6eb; font-family:sans-serif; font-weight:900; font-size:16px; letter-spacing:0.5px;%7D%3C/style%3E%3C/defs%3E%3Cg%3E%3Cpath class='body' d='M160 54l-64 0c-3.8 0-6.6-3.2-5.9-6.8l3.1-16.5c3.8-20.5 16.9-35.7 37.8-35.7 18.9 0 31.1 7.7 35.8 26.8l6.1 25.1c0.9 3.6-1.8 7.1-5.6 7.1z'/%3E%3Ctext x='130' y='42' text-anchor='middle' class='lbl'%3ELT%3C/text%3E%3C/g%3E%3C/svg%3E");
+  top: -30px;
+  left: 77px;
+  transform: rotate(-20deg);
+  filter: none !important;
+}
+
+/* Left Trigger (LT) - Pressed */
+.custom .trigger-button.left.pressed {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 582 460' width='582px' height='460px' style='shape-rendering:geometricPrecision; fill-rule:evenodd; clip-rule:evenodd'%3E%3Cdefs%3E%3Cstyle%3E.body%7Bfill:%2316181a; stroke:%2326282c; stroke-width:1.5px;%7D.lbl%7Bfill:%238d939c; font-family:sans-serif; font-weight:900; font-size:16px; letter-spacing:0.5px;%7D%3C/style%3E%3C/defs%3E%3Cg%3E%3Cpath class='body' d='M160 54l-64 0c-3.8 0-6.6-3.2-5.9-6.8l3.1-16.5c3.8-20.5 16.9-35.7 37.8-35.7 18.9 0 31.1 7.7 35.8 26.8l6.1 25.1c0.9 3.6-1.8 7.1-5.6 7.1z'/%3E%3Ctext x='130' y='42' text-anchor='middle' class='lbl'%3ELT%3C/text%3E%3C/g%3E%3C/svg%3E");
+  top: -30px;
+  left: 77px;
+  transform: rotate(-20deg);
+  filter: none !important;
+}
+
+/* Right Trigger (RT) - Resting */
+.custom .trigger-button.right {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 582 460' width='582px' height='460px' style='shape-rendering:geometricPrecision; fill-rule:evenodd; clip-rule:evenodd'%3E%3Cdefs%3E%3Cstyle%3E.body%7Bfill:%2325272a; stroke:%233d4147; stroke-width:1.5px;%7D.lbl%7Bfill:%23e2e6eb; font-family:sans-serif; font-weight:900; font-size:16px; letter-spacing:0.5px;%7D%3C/style%3E%3C/defs%3E%3Cg%3E%3Cpath class='body' d='M422 54l64 0c3.8 0 6.6-3.2 5.9-6.8l-3.1-16.5c-3.8-20.5-16.9-35.7-37.8-35.7-18.9 0-31.1 7.7-35.8 26.8l-6.1 25.1c-0.9 3.6 1.8 7.1 5.6 7.1z'/%3E%3Ctext x='452' y='42' text-anchor='middle' class='lbl'%3ERT%3C/text%3E%3C/g%3E%3C/svg%3E");
+  top: -30px;
+  left: -77px;
+  transform: rotate(20deg);
+  filter: none !important;
+}
+
+/* Right Trigger (RT) - Pressed */
+.custom .trigger-button.right.pressed {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 582 460' width='582px' height='460px' style='shape-rendering:geometricPrecision; fill-rule:evenodd; clip-rule:evenodd'%3E%3Cdefs%3E%3Cstyle%3E.body%7Bfill:%2316181a; stroke:%2326282c; stroke-width:1.5px;%7D.lbl%7Bfill:%238d939c; font-family:sans-serif; font-weight:900; font-size:16px; letter-spacing:0.5px;%7D%3C/style%3E%3C/defs%3E%3Cg%3E%3Cpath class='body' d='M422 54l64 0c3.8 0 6.6-3.2 5.9-6.8l-3.1-16.5c-3.8-20.5-16.9-35.7-37.8-35.7-18.9 0-31.1 7.7-35.8 26.8l-6.1 25.1c-0.9 3.6 1.8 7.1 5.6 7.1z'/%3E%3Ctext x='452' y='42' text-anchor='middle' class='lbl'%3ERT%3C/text%3E%3C/g%3E%3C/svg%3E");
+  top: -30px;
+  left: -77px;
+  transform: rotate(20deg);
+  filter: none !important;
+}
+/* Custom Sticks Container */
+.custom .sticks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* 1. Stationary Left Dome Well */
+.custom .sticks::before {
+  content: "";
+  position: absolute;
+  top: 209px;
+  left: 202px;
+  width: 54px;
+  height: 54px;
+  margin-top: -53px;
+  margin-left: -53px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 36%, 
+    #32373e 0%, 
+    #21252b 35%, 
+    #13161a 70%, 
+    #090a0c 100%
+  );
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.12),
+              inset 0 -3px 6px rgba(0, 0, 0, 0.85);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 2. Stationary Right Dome Well */
+.custom .sticks::after {
+  content: "";
+  position: absolute;
+  top: 277px;
+  left: 378px;
+  width: 54px;
+  height: 54px;
+  margin-top: -53px;
+  margin-left: -53px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 36%, 
+    #32373e 0%, 
+    #21252b 35%, 
+    #13161a 70%, 
+    #090a0c 100%
+  );
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.12),
+              inset 0 -3px 6px rgba(0, 0, 0, 0.85);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 3. Moving Sticks (Exact dimensions and coordinates preserved) */
+.custom .stick {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  background-image: url("https://i.imgur.com/eYM8Mcq.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  filter: brightness(0.85) contrast(1.25);
+  margin-top: -53px;
+  margin-left: -53px;
+  z-index: 2;
+  transition: filter 0.05s ease;
+}
+
+/* Left Stick Position */
+.custom .stick.left {
+  top: 130px;
+  left: 122px;
+}
+
+/* Right Stick Position */
+.custom .stick.right {
+  top: 198px;
+  left: 298px;
+}
+
+.custom .stick.pressed {
+  filter: brightness(0.65) contrast(1.3) !important;
+}
+/* --- D-PAD CONTAINER & BASE --- */
+.custom .dpad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* 1. Stationary Base D-Pad (Resting disc permanently visible underneath) */
+.custom .dpad::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 200px;
+  left: 175px;
+  margin-top: -46px;
+  margin-left: -46px;
+  background-image: url("https://i.imgur.com/NcpG1kx.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 2. Face Elements (Hidden while resting so they never block each other) */
+.custom .face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 200px;
+  left: 175px;
+  margin-top: -46px;
+  margin-left: -46px;
+  background-image: url("https://i.imgur.com/NcpG1kx.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transform-origin: center center;
+  opacity: 0; /* Fully invisible when not pressed */
+  transition: transform 0.05s ease, filter 0.05s ease, opacity 0.03s ease;
+  z-index: 3;
+}
+
+/* 3. Reveal active face on press */
+.custom .face.pressed {
+  opacity: 1 !important;
+  z-index: 10 !important;
+}
+
+/* --- CARDINAL PRESSES --- */
+
+/* UP: Tilts top edge into the shell, lifts bottom edge toward viewer */
+.custom .face.up.pressed {
+  transform: perspective(220px) rotateX(-20deg) translateY(-2px) scale(0.98);
+  filter: brightness(0.70) contrast(1.35) drop-shadow(0 7px 4px rgba(0, 0, 0, 0.9)) !important;
+}
+
+/* DOWN */
+.custom .face.down.pressed {
+  transform: perspective(220px) rotateX(-18deg) translateY(3px) scale(0.98);
+  filter: brightness(0.72) contrast(1.35) drop-shadow(0 -6px 4px rgba(0, 0, 0, 0.85)) !important;
+}
+
+/* LEFT */
+.custom .face.left.pressed {
+  transform: perspective(220px) rotateY(-18deg) translateX(-2px) scale(0.98);
+  filter: brightness(0.72) contrast(1.35) drop-shadow(6px 0 4px rgba(0, 0, 0, 0.85)) !important;
+}
+
+/* RIGHT */
+.custom .face.right.pressed {
+  transform: perspective(220px) rotateY(18deg) translateX(2px) scale(0.98);
+  filter: brightness(0.72) contrast(1.35) drop-shadow(-6px 0 4px rgba(0, 0, 0, 0.85)) !important;
+}
+
+/* --- DIAGONALS (HIDE SIBLINGS & TILT THE ACTIVE DIAGONAL FACE) --- */
+
+/* UP + RIGHT */
+.custom .face.up.pressed ~ .face.right.pressed {
+  transform: perspective(220px) rotateX(16deg) rotateY(16deg) translate(2px, 2px) scale(0.97) !important;
+  filter: brightness(0.70) contrast(1.4) drop-shadow(-5px 5px 4px rgba(0, 0, 0, 0.9)) !important;
+  opacity: 1 !important;
+  z-index: 15 !important;
+}
+.custom .face.up.pressed:has(~ .face.right.pressed) {
+  opacity: 0 !important; /* Hides up so only the compound right face displays */
+}
+
+/* UP + LEFT */
+.custom .face.up.pressed ~ .face.left.pressed {
+  transform: perspective(220px) rotateX(16deg) rotateY(-16deg) translate(-2px, 2px) scale(0.97) !important;
+  filter: brightness(0.70) contrast(1.4) drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9)) !important;
+  opacity: 1 !important;
+  z-index: 15 !important;
+}
+.custom .face.up.pressed:has(~ .face.left.pressed) {
+  opacity: 0 !important;
+}
+
+/* DOWN + RIGHT */
+.custom .face.down.pressed ~ .face.right.pressed {
+  transform: perspective(220px) rotateX(-16deg) rotateY(16deg) translate(2px, 3px) scale(0.97) !important;
+  filter: brightness(0.70) contrast(1.4) drop-shadow(-5px -5px 4px rgba(0, 0, 0, 0.9)) !important;
+  opacity: 1 !important;
+  z-index: 15 !important;
+}
+.custom .face.down.pressed:has(~ .face.right.pressed) {
+  opacity: 0 !important;
+}
+
+/* DOWN + LEFT */
+.custom .face.down.pressed ~ .face.left.pressed {
+  transform: perspective(220px) rotateX(-16deg) rotateY(-16deg) translate(-2px, 3px) scale(0.97) !important;
+  filter: brightness(0.70) contrast(1.4) drop-shadow(5px -5px 4px rgba(0, 0, 0, 0.9)) !important;
+  opacity: 1 !important;
+  z-index: 15 !important;
+}
+.custom .face.down.pressed:has(~ .face.left.pressed) {
+  opacity: 0 !important;
+}
+/* --- A, B, X and Y BUTTONS --- */
+.custom .abxy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Base Button Sizing & Styling (All 4 buttons share this) */
+.custom .button {
+  position: absolute;
+  width: 465px;
+  height: 465px;
+  margin-top: -19px;
+  margin-left: -295px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  /* Centers the scaling pivot on the drawn button itself */
+  transform-origin: 345px 231px;
+  transition: transform 0.04s ease, filter 0.04s ease;
+  z-index: 2;
+}
+
+/* --- BUTTON LOCATIONS (Aligned to Faceplate Sockets) --- */
+
+/* A (Bottom Button) */
+.custom .button.a {
+  top: 46.25px;
+  left: 307.1px;
+  background-image: url("https://raw.githubusercontent.com/frolovlife/gamepadviewer-skins/863803549af7b71eda76aac6745ae54bfaf3ffda/8bitdo/pro2/gray-button-a.svg");
+}
+
+/* B (Right Button) */
+.custom .button.b {
+  top: -14px;
+  left: 372px;
+  background-image: url("https://raw.githubusercontent.com/frolovlife/gamepadviewer-skins/863803549af7b71eda76aac6745ae54bfaf3ffda/8bitdo/pro2/gray-button-b.svg");
+}
+
+/* X (Left Button) */
+.custom .button.x {
+  top: 48.8px;
+  left: 314px;
+  background-image: url("https://raw.githubusercontent.com/frolovlife/gamepadviewer-skins/863803549af7b71eda76aac6745ae54bfaf3ffda/8bitdo/pro2/gray-button-x.svg");
+}
+
+/* Y (Top Button) */
+.custom .button.y {
+  top: -11.7px;
+  left: 379.3px;
+  background-image: url("https://raw.githubusercontent.com/frolovlife/gamepadviewer-skins/863803549af7b71eda76aac6745ae54bfaf3ffda/8bitdo/pro2/gray-button-y.svg");
+}
+
+/* --- MECHANICAL PRESSED STATE (Zero Size Shift, Pure Tactile Recess) --- */
+.custom .button.pressed {
+  /* No scale, no translate: button stays locked dead-center covering the hole */
+  transform: none !important;
+  /* Darkens and increases contrast to simulate plunging beneath the bezel shadow */
+  filter: brightness(0.55) contrast(1.45) saturate(1.2) drop-shadow(0 0 1px rgba(0, 0, 0, 0.95)) !important;
+  z-index: 3 !important;
+}
