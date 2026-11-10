@@ -17,7 +17,7 @@
 }
 
 .custom.disconnected {
-  background-image: url("https://i.imgur.com/gEwd12d.png");
+  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/disconnected.png?raw=true");
 }
 
 .custom.disconnected div {
@@ -209,14 +209,14 @@
 
 /* Left Stick Position */
 .custom .stick.left {
-  top: 130px;
-  left: 122px;
+  top: 125px;
+  left: 117px;
 }
 
 /* Right Stick Position */
 .custom .stick.right {
-  top: 198px;
-  left: 298px;
+  top: 193px;
+  left: 293px;
 }
 
 .custom .stick.pressed {
@@ -412,33 +412,49 @@
   filter: brightness(0.55) contrast(1.45) saturate(1.2) drop-shadow(0 0 1px rgba(0, 0, 0, 0.95)) !important;
   z-index: 3 !important;
 }
-/* Start and Select. */
+/* Start and Select Base */
 .custom .arrows {
-}
-
-.custom .start, .custom .back {
   position: absolute;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
-.custom .start {
-  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/start.png?raw=true");
-  transform: rotateY(180deg);
-}
-
-.custom .start.pressed {
-  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/start.png?raw=true");
-  transform: rotateY(180deg);
-}
-
+/* Shared baseline properties (NO shared width/height) */
+.custom .start, 
 .custom .back {
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: filter 0.05s ease;
+  z-index: 4;
+}
+
+/* Select (Back) - Keep the exact width/height that looks normal */
+.custom .back {
+  width: 478px;             /* Your existing working width */
+  height: 239px;            /* Your existing working height */
+  top: 30.5px;
+  left: 122.5px;
   background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/select.png?raw=true");
 }
 
 .custom .back.pressed {
-  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/select.png?raw=true");
+  filter: brightness(0.7) contrast(1.15) drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+}
+
+/* Start Button - Scaled down independently to visually match Select */
+.custom .start {
+  width: 70px;             /* Reduce this value until the visual pill matches Select */
+  height: 35px;            /* Maintain the same aspect ratio (half of width) */
+  top: 132.5px;
+  left: 313px;
+  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/start.png?raw=true");
+}
+
+.custom .start.pressed {
+  filter: brightness(0.7) contrast(1.15) drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
 }
