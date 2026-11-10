@@ -412,3 +412,33 @@
   filter: brightness(0.55) contrast(1.45) saturate(1.2) drop-shadow(0 0 1px rgba(0, 0, 0, 0.95)) !important;
   z-index: 3 !important;
 }
+/* Start and Select. */
+.custom .arrows {
+}
+
+.custom .start, .custom .back {
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.custom .start {
+  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/start.png?raw=true");
+  transform: rotateY(180deg);
+}
+
+.custom .start.pressed {
+  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/start.png?raw=true");
+  transform: rotateY(180deg);
+}
+
+.custom .back {
+  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/select.png?raw=true");
+}
+
+.custom .back.pressed {
+  background-image: url("https://github.com/sauravphuyal01/Fantech-Eos-pro-IIs-geminius-custom-skin-css-gamepadviewer/blob/main/Components/select.png?raw=true");
+}
